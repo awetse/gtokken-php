@@ -30,7 +30,7 @@ var_dump($tTList);
 
 
 
-/*
+
 //Список смарт контрактов
 $titles=[];
 $titles[]='ПЭТ';
@@ -62,7 +62,7 @@ for($i=0;$i<count($titles);$i++)
 //die();
 saveTokenList($tokenTypeList);
 //----------------
-*/
+
 //die();
 $tokenTypeList = getTokenTypeList();
 $tokenCoinsAll = getAllCoins();
