@@ -34,7 +34,7 @@ function getUsers(){
 	  $userList = array();$i=0;
 		$userList[$i++] = array('user'=>_EMPTY,  'login'=>'',     'password'=>'',    'id'=>'');		
 		$userList[$i++] = array('user'=>_ADMIN,  'login'=>'',     'password'=>'',    'id'=>'7fe5369328ec30cf3cc1072d40005a15');		
-		$userList[$i++] = array('user'=>_ADMIN,  'login'=>'adminandrei','password'=>'7fe5369328ec30cf3cc1072d40005a15', 'id'=>'');//awetse123456789
+		$userList[$i++] = array('user'=>_ADMIN,  'login'=>'admin','password'=>'7fe5369328ec30cf3cc1072d40005a15', 'id'=>'');//admin123456789
 		$userList[$i++] = array('user'=>_ADMIN,  'login'=>'manager','password'=>'efa00e957b4c215a38679ab0bc7531b8', 'id'=>'');//manager123456789
 	return $userList;
 }
