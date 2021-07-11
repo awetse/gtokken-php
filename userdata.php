@@ -28,7 +28,7 @@
 						);
 	//---user access rights #define---//
 	
-function getUsers(){	
+function getUsers(){	//old func, not using now
 		
 				   
 	  $userList = array();$i=0;
