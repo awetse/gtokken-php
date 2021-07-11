@@ -2,6 +2,7 @@
 require_once('defpaths.php');
 
 //class tokenTypeClass 
+//smart - contract
 class tokenTypeClass
 {
 	private $tokenRaw;
