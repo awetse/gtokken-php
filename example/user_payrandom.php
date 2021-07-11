@@ -1,5 +1,5 @@
 <?php
-require_once('userdata.php');
+require_once('../userdata.php');
 $uLogin='7';
 $t_user = _CLIENT;
 $xc = getUF($uLogin);
