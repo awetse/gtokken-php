@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
-require_once('tokencoinclass.php');
-require_once('token_f.php');
+require_once('../tokencoinclass.php');
+require_once('../token_f.php');
 die();
 $tokenTypeList = getTokenTypeList();//загружаем все смарт-контракты
 $tokenCoinsAll = selectCoinsByUser(getAllCoins(),_ROOT);//выбираем все монеты принадлежащие _ROOT по всем смарт-контрактам
