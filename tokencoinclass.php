@@ -1,6 +1,7 @@
 <?php
 require_once('defpaths.php');
 //class tokenCoinClass
+//token for smart-contract
 class tokenCoinClass
 {
 	public $tokenCoin;
@@ -8,7 +9,7 @@ class tokenCoinClass
 	
 public function __construct($tokenCoin) {		
 		
-		$this->tokenCoin = $this->createTokenTypeDummy($tokenCoin);
+		$this->tokenCoin = $this->createTokenTypeDummy($tokenCoin);//$tokenCoin -> smart-contract`s ID
 	}	
 private function createTokenTypeDummy($typeid='')
 {
