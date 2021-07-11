@@ -1,0 +1,71 @@
+
+/*----------------------tooltip --------------------------------- */
+.prof-ico {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.set-tooltip:hover .tooltip {
+  display: block;
+  opacity:1;
+}
+
+
+.tooltip {
+  padding: 10px;
+  position: absolute;
+  width: auto;
+  min-width:200px;
+  white-space: nowrap;
+  word-wrap: no-wrap;
+  box-shadow: 1px 1px 20px #aaa;
+  border-radius: 5px;
+  background-color: #fff;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%);
+  transform-style: preserve-3d;
+  z-index: 200;
+  font-size: 0.9em;
+  display: none;
+  opacity:1;
+}
+.tooltip:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  transform-origin: 50% 50%;
+  transform: rotate(45deg) translateX(-50%);
+  background-color: rgba(50, 4, 35, 0.9);
+  left: 50%;
+  top: -1px;
+  z-index: 400;
+}
+.tooltip:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform-origin: 50% 50%;
+  transform: rotate(45deg) translateX(-50%) translateZ(-1px);
+  background-color: rgba(50, 4, 35, 0.9);
+  left: 50%;
+  top: 0px;
+  z-index: -1;
+  box-shadow: -1px -1px 20px #aaa;
+}
+
+.tooltip__profile {
+  color: #fff;
+  opacity:1;
+  background:rgba(50, 4, 35, 0.9);
+  box-shadow: 1px 1px 20px rgba(50, 4, 35, 0.3);
+}
+.tooltip__another {
+  color: #fff;
+  background:#fff;
+  box-shadow: 1px 1px 20px rgba(50, 4, 35, 0.3);
+}

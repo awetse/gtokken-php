@@ -1,0 +1,68 @@
+.workplace
+{
+	display:block;
+	width:100%;
+	margin:0;
+}
+.main-sheet
+{
+	display:block;
+	width:100%;
+	margin:0;
+	padding:0rem;
+}
+.work-sheet-container
+{
+	margin:1rem;
+}
+.left-menu
+{
+	padding-top:1rem;
+	background:#d8d8d8;
+	display:block;
+	min-height:calc( 100vh - 88px );
+	min-width:300px;
+	max-width:350px;
+	width:30%;
+	z-index: 2;
+	transform: translateX(0px);
+	transition: all .5s;
+	transition-timing-function: ease-in-out;
+}
+.nav-pills .nav-link
+{
+	font-family:'Rubik';
+	text-align:left;
+	border:0;
+	background:none;
+}
+.hidden-checkbox
+{
+	display:none;
+}
+.mobile-menu-button label
+{
+	    padding: 0.5rem;
+		cursor:pointer;
+}
+.mobile-menu-button label:hover
+{
+	background:#aaa9;
+}
+.toolHeader-container
+{
+	display:none;
+	
+}
+@media screen and  (max-width: 991px)
+{
+	.left-menu
+{
+	display:none;
+	
+}
+.toolHeader-container
+{
+	display:block;
+}
+}

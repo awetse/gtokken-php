@@ -1,0 +1,135 @@
+<?php
+header('Content-Type: text/html; charset=utf-8');
+
+//echo'hi<br>';
+require_once("loginmodule.php");
+require_once('tokencoinclass.php');
+require_once('token_f.php');
+require_once('modals_f.php');
+
+//<!-- ****************************************** -->
+
+$url = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+$arPath = explode( '/', $url);
+$cFile = $arPath[count($arPath)-1];
+$ua = $_SERVER['HTTP_USER_AGENT'];
+$ip = $_SERVER['REMOTE_ADDR'];
+if (stripos($ip,'192.168')===false){
+$handle = fopen("log/".date("Y-m-d")."_resource.log", "a+");
+$stamp = isset($_COOKIE['userid'])?$_COOKIE['userid']:'no_id';
+$stamp =trim($stamp);
+$stamp =str_replace(chr(9),'',$stamp);
+
+$split = ' | ';
+fwrite($handle, "[".$login."]".$split.date("Y-m-d H:i:s")."".$split."[".$ip."]".$split."[".$ua."]".$split."".str_replace('|','#',$cFile)."".$split."[ ".$stamp."]".$split."[ end ]\n\r");
+fclose($handle);
+}
+//<!-- ****************************************** -->
+
+$userData = file_get_contents('./user/'.$login.'/'.'auth-'.$login.'.json');
+$cert = file_get_contents('xr.cert');
+$userData = xEnCrypt($userData,$cert);
+$userData = json_decode($userData,JSON_OBJECT_AS_ARRAY);
+$userOrigin=findUser($userData['login']);
+
+if($userData['user']==$userOrigin['user'])
+{
+//echo'Права пользователя подтверждены - >'.$x_user.'<br>';
+}
+else {
+	//echo'Не соответствие прав доступа. Обратитесь к администратору'.'<br>'.$userData['user'].' && '. $userOrigin['user'];
+//die();
+}
+/*
+$tokentypePath='./---/0xdata/tokentypes/';
+$tokensPath='./---/0xdata/tokens/';
+$tokenstypelist = glob($tokentypePath.'*.{json}', GLOB_BRACE);
+$tokentypes=[];
+for($i=0;$i<count($tokenstypelist);$i++)
+{
+$tFile = file_get_contents($tokenstypelist[$i]);
+if($tFile=json_decode($tFile,JSON_OBJECT_AS_ARRAY))
+	{$tokentypes = array_merge($tokentypes,$tFile);}
+}
+
+$tokensfilelist = glob($tokensPath.'*.{json}', GLOB_BRACE);
+$tokensItems=[];
+for($i=0;$i<count($tokensfilelist);$i++)
+{
+$tFile = file_get_contents($tokensfilelist[$i]);
+if($tFile=json_decode($tFile,JSON_OBJECT_AS_ARRAY))
+	{$tokensItems = array_merge($tokensItems,$tFile);}
+}*/
+//var_dump($tokensItems);
+//echo($file)	;
+?>
+
+<!DOCTYPE HTML >
+<html>
+<title>[- Личный кабинет :: пользователь <?php echo $userData['login'] ?> -]</title>
+<head>
+
+  <meta name="theme-color" content="#000099">
+  <meta name="msapplication-navbutton-color" content="#000099">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000099">
+  
+  <!--link rel="icon" href="./favicon64.png" type="image/x-icon"/-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <link rel="stylesheet" type="text/css" href="./css/tooltip.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+
+
+
+  <div class="logoHeader-container" id="logo-header">
+	
+	 
+	 <div class="logoHeader-block id=logoHeader-block-2">	  
+	 </div>
+
+	 <div class="user-identity-container set-tooltip">
+	 <div class="tooltip tooltip__profile">По нажатию переходит на страницу авторизации /login</div>
+	 <?php echo $login.' -  <a class="link-light" href="logout.php"><svg xmlns="https://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-open-fill" viewBox="0 0 16 16">  <path d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"/></svg></a> '?>
+	 </div>	
+	 	 <div class="user-balance-container set-tooltip">
+			<div class="tooltip tooltip__profile">По нажатию переходит в сервис пополнения кошелька // покупка RCYCL за валюту[рубли, доллары ...] (платежные системы )</div>
+		<span>Баланс: </span><span id="balance-amount">
+		<?php 
+			echo((isset($userData['rcycl_amount']))?($userData['rcycl_amount']):'0.0');
+		?>
+		</span><span> RCL</span>
+	 </div>
+
+	</div>
+	<div id="toolHeader" class="toolHeader-container">
+		<div class="mobile-menu-button">
+			<input type="checkbox" class="hidden-checkbox" id="hamburger-menu">
+			<label for="hamburger-menu">	
+				<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-justify" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/></svg>	
+			</label>
+		</div>
+	</div>
+<link rel="stylesheet" type="text/css" href="./block/workplace.css">	
+<div class="workplace -container-xxl">
+<?php
+include('account_scripts.php');
+?>
+</div>
+<div id=consoler style=""></div>  
+
+<script src="./js/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="./js/masked_input.js" type="text/javascript" charset="utf-8"></script>
+<script src="./js/editcookie.js" type="text/javascript" charset="utf-8"></script>
+<script src="./js/valenok.js" type="text/javascript" charset="utf-8"></script>
+<script src="./js/accounthandler.js" type="text/javascript" charset="utf-8"></script>
+<!-- Popper.js first, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
