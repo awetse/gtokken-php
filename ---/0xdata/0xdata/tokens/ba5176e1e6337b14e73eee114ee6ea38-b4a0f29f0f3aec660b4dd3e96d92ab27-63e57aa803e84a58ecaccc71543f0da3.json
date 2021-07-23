@@ -1,13 +1,19 @@
 {
-    "ba5176e1e6337b14e73eee114ee6ea38-b4a0f29f0f3aec660b4dd3e96d92ab27-63e57aa803e84a58ecaccc71543f0da3": {
-        "type": "ede9a74e0e094a2618eb6c6323602868-edba68f06158faf86a7aac9a1ee6b06e",
+    "5ab3f90d4f5b4b36ff525dd0fbde1eff-3054b0dfd9cc44e46515c0cc5de8282b-118156b102350a1aee283d299344f05d": {
+        "type": "0e20b60cedb14f862398c7766c9ed6d0-930bda8e8c6b1931ff0c8fb242680027",
         "owner": "roottrader",
-        "release": "2021/07/10",
-        "random": "1101492c16259561330614",
-        "id": "ba5176e1e6337b14e73eee114ee6ea38-b4a0f29f0f3aec660b4dd3e96d92ab27-63e57aa803e84a58ecaccc71543f0da3",
-        "currentowner": "roottrader",
-        "currowid": "ba5176e1e6337b14e73eee114ee6ea38-b4a0f29f0f3aec660b4dd3e96d92ab27-63e57aa803e84a58ecaccc71543f0da3",
-        "purchasedate": "2021/07/10",
-        "history": []
+        "release": "2021/05/26",
+        "random": "1711457c16220381095427",
+        "id": "5ab3f90d4f5b4b36ff525dd0fbde1eff-3054b0dfd9cc44e46515c0cc5de8282b-118156b102350a1aee283d299344f05d",
+        "currentowner": "adminandrei",
+        "currowid": "7b77f7b5694063ae6caf3fa02083fc28ю0789a732b7e01c81b9ac5fabc47d6c4f",
+        "purchasedate": "2021/05/26",
+        "history": [
+            {
+                "previousowner": "roottrader",
+                "prevownid": "5ab3f90d4f5b4b36ff525dd0fbde1eff-3054b0dfd9cc44e46515c0cc5de8282b-118156b102350a1aee283d299344f05d",
+                "date": "2021/05/26"
+            }
+        ]
     }
 }
