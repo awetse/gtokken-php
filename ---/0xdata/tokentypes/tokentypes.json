@@ -1,0 +1,164 @@
+{
+    "7ac01dfca1b5a0103a76ddfc64b12af4-96f4ce5e77336cfbb522a3df4956f030": {
+        "creator": "roottrader",
+        "releasedata": "2021/05/26",
+        "random": "981563X16220381095292",
+        "id": "7ac01dfca1b5a0103a76ddfc64b12af4-96f4ce5e77336cfbb522a3df4956f030",
+        "burndata": "2021/12/31",
+        "title": "ПЭТ-крошка",
+        "startcost": "18000",
+        "startprice": "23000",
+        "unit": "тонна",
+        "startsale": "2021/05/26",
+        "stopsale": "2021/09/31",
+        "accumulation": {
+            "3": "10",
+            "6": "15",
+            "12": "25"
+        }
+    },
+    "e48ae7238397870db4e75f0b383b2b4a-e15d6e4d81291beaf05585db1625a720": {
+        "creator": "roottrader",
+        "releasedata": "2021/05/26",
+        "random": "1117053X16220381095293",
+        "id": "e48ae7238397870db4e75f0b383b2b4a-e15d6e4d81291beaf05585db1625a720",
+        "burndata": "2021/12/31",
+        "title": "Бутылка Малышка",
+        "startcost": "19500",
+        "startprice": "23500",
+        "unit": "тонна",
+        "startsale": "2021/05/26",
+        "stopsale": "2021/09/31",
+        "accumulation": {
+            "3": "10",
+            "6": "15",
+            "12": "25"
+        }
+    },
+    "0e20b60cedb14f862398c7766c9ed6d0-930bda8e8c6b1931ff0c8fb242680027": {
+        "creator": "roottrader",
+        "releasedata": "2021/05/26",
+        "random": "149089X16220381095293",
+        "id": "0e20b60cedb14f862398c7766c9ed6d0-930bda8e8c6b1931ff0c8fb242680027",
+        "burndata": "2021/12/31",
+        "title": "Стеклотара",
+        "startcost": "17900",
+        "startprice": "23900",
+        "unit": "тонна",
+        "startsale": "2021/05/26",
+        "stopsale": "2021/09/31",
+        "accumulation": {
+            "3": "10",
+            "6": "15",
+            "12": "25"
+        }
+    },
+    "26042be409becd75ac70e689d744d549-a27b344ed636590735041e4fd13e0768": {
+        "creator": "roottrader",
+        "releasedata": "2021/05/26",
+        "random": "1335280X16220381095293",
+        "id": "26042be409becd75ac70e689d744d549-a27b344ed636590735041e4fd13e0768",
+        "burndata": "2021/12/31",
+        "title": "Бумага",
+        "startcost": "18200",
+        "startprice": "24200",
+        "unit": "тонна",
+        "startsale": "2021/05/26",
+        "stopsale": "2021/09/31",
+        "accumulation": {
+            "3": "10",
+            "6": "15",
+            "12": "25"
+        }
+    },
+    "ea085e4d56da329bb974f2d8f2e9b01d-4a2dc69b5a5f551ab46290dbdd90f8a7": {
+        "creator": "roottrader",
+        "releasedata": "2021/05/26",
+        "random": "977116X16220381095293",
+        "id": "ea085e4d56da329bb974f2d8f2e9b01d-4a2dc69b5a5f551ab46290dbdd90f8a7",
+        "burndata": "2021/12/31",
+        "title": "Алюминиевая банка",
+        "startcost": "18350",
+        "startprice": "24350",
+        "unit": "тонна",
+        "startsale": "2021/05/26",
+        "stopsale": "2021/09/31",
+        "accumulation": {
+            "3": "10",
+            "6": "15",
+            "12": "25"
+        }
+    },
+    "5ceb8ed26c3bc57b73c42bf215232a34-fc1bbfb971f88c5c8a950e040c1766ab": {
+        "creator": "roottrader",
+        "releasedata": "2021/07/10",
+        "random": "1148028X16259560780271",
+        "id": "5ceb8ed26c3bc57b73c42bf215232a34-fc1bbfb971f88c5c8a950e040c1766ab",
+        "burndata": "2021/12/31",
+        "title": "F-ПЭТ",
+        "startcost": "10033",
+        "startprice": false,
+        "unit": "тонна",
+        "startsale": "2021/07/10",
+        "stopsale": "2021/09/31",
+        "accumulation": {
+            "3": "10",
+            "6": "15",
+            "12": "25"
+        }
+    },
+    "d018b780ccc12219919d7c0bb4b8e32d-053198c22e00c865e4704e92d9516bc0": {
+        "creator": "roottrader",
+        "releasedata": "2021/07/10",
+        "random": "85314X16259560780273",
+        "id": "d018b780ccc12219919d7c0bb4b8e32d-053198c22e00c865e4704e92d9516bc0",
+        "burndata": "2021/12/31",
+        "title": "F-Стеклоа",
+        "startcost": "11033",
+        "startprice": false,
+        "unit": "тонна",
+        "startsale": "2021/07/10",
+        "stopsale": "2021/09/31",
+        "accumulation": {
+            "3": "10",
+            "6": "15",
+            "12": "25"
+        }
+    },
+    "91b6e34c0207d28f3fe575c9de690ea8-4f4afc28e92a116d61883ab40211df55": {
+        "creator": "roottrader",
+        "releasedata": "2021/07/10",
+        "random": "1452749X16259560780273",
+        "id": "91b6e34c0207d28f3fe575c9de690ea8-4f4afc28e92a116d61883ab40211df55",
+        "burndata": "2021/12/31",
+        "title": "F-Бумага",
+        "startcost": "12033",
+        "startprice": false,
+        "unit": "тонна",
+        "startsale": "2021/07/10",
+        "stopsale": "2021/09/31",
+        "accumulation": {
+            "3": "10",
+            "6": "15",
+            "12": "25"
+        }
+    },
+    "ede9a74e0e094a2618eb6c6323602868-edba68f06158faf86a7aac9a1ee6b06e": {
+        "creator": "roottrader",
+        "releasedata": "2021/07/10",
+        "random": "1775836X16259560780274",
+        "id": "ede9a74e0e094a2618eb6c6323602868-edba68f06158faf86a7aac9a1ee6b06e",
+        "burndata": "2021/12/31",
+        "title": "F-Алюминиевая банка",
+        "startcost": "13033",
+        "startprice": false,
+        "unit": "тонна",
+        "startsale": "2021/07/10",
+        "stopsale": "2021/09/31",
+        "accumulation": {
+            "3": "10",
+            "6": "15",
+            "12": "25"
+        }
+    }
+}
